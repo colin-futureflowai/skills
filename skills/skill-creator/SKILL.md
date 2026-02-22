@@ -42,7 +42,7 @@ This skill lives in a repo with specific conventions. When creating skills, foll
 - Every skill MUST have a `SKILL.md` as its entry point with YAML frontmatter
 - Rules go in `rules/*.md` inside the skill directory
 - Skills should be self-contained and independent of each other
-- Use `cp -r templates/skill-template skills/<new-skill-name>` as a starting point
+- Use `cp -r templates/skill-template skills/<new-skill-name>` as a starting point, then rename `SKILL.md.template` to `SKILL.md`
 
 **Standard skill directory structure:**
 ```

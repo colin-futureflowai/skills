@@ -1,0 +1,12 @@
+{
+  "skills": [
+    {
+      "name": "100m-offers-skill",
+      "path": "skills/100m-offers-skill"
+    },
+    {
+      "name": "skill-creator",
+      "path": "skills/skill-creator"
+    }
+  ]
+}

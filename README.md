@@ -24,16 +24,33 @@ skills/
 
 ## Installation
 
-### Install a single skill
+### Public repo — via skillfish (recommended)
+
+[skillfish](https://github.com/knoxgraeme/skillfish) lets you install skills from GitHub in one command — no need to clone the repo. Requires the repo to be **public**.
 
 ```bash
-# Copy a skill into your Claude Code settings
-cp -r skills/<skill-name> ~/.claude/skills/<skill-name>
+# Install a single skill
+npx skillfish add colin-futureflowai/skills 100m-offers-skill
+
+# Install all skills from this repo
+npx skillfish add colin-futureflowai/skills --all
+
+# Install to current project only
+npx skillfish add colin-futureflowai/skills --all --project
 ```
 
-### Install all skills
+### Private repo — via git clone
+
+Skillfish doesn't support private repos. Clone the repo and copy skills manually instead.
 
 ```bash
+git clone git@github.com:colin-futureflowai/skills.git
+cd skills
+
+# Install a single skill
+cp -r skills/<skill-name> ~/.claude/skills/<skill-name>
+
+# Or install all skills at once
 ./scripts/install.sh
 ```
 
@@ -57,6 +74,7 @@ Alternatively, scaffold manually:
 ```bash
 # Use the template to scaffold a new skill
 cp -r templates/skill-template skills/<your-skill-name>
+mv skills/<your-skill-name>/SKILL.md.template skills/<your-skill-name>/SKILL.md
 ```
 
 Then edit the `SKILL.md` and add your rules in the `rules/` directory.
