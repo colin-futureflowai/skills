@@ -1,0 +1,20 @@
+{
+  "skill_name": "100m-offers",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I run a B2B SaaS that helps ecommerce brands manage returns. We charge $299/mo but our churn is brutal — about 8% monthly. I think our offer just isn't compelling enough. Can you help me rethink the whole thing using the $100M Offers framework?",
+      "expected_output": "Full workshop mode — should walk through all 8 steps, starting with identifying the dream outcome for ecommerce brands, then building a stacked offer that makes $299/mo feel like a steal."
+    },
+    {
+      "id": 2,
+      "prompt": "Here's my current offer: 12-week fitness coaching program, $997, includes a custom meal plan, 3x/week workout programming, weekly check-in calls, and a private community. Conversions are low. What's wrong with it?",
+      "expected_output": "Quick mode — scorecard analysis of the existing offer, specific recommendations on what's missing (likely weak guarantee, no scarcity, generic naming, unclear dream outcome)."
+    },
+    {
+      "id": 3,
+      "prompt": "I need sales page copy for my agency's new offer — we build AI automation systems for accounting firms. The package is $15K and includes full workflow audit, custom n8n automations, 3 months of support, and training for their team. Help me write something that converts.",
+      "expected_output": "Should generate full sales page copy following the framework's structure: dream outcome headline, problem agitation, solution, value stack with anchored pricing, guarantee, scarcity, CTA."
+    }
+  ]
+}
