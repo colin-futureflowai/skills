@@ -1,0 +1,23 @@
+{
+  "skill_name": "marketing-analytics",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Maak een Microsoft Clarity rapport voor mijn website over de afgelopen 30 dagen. Focus op de homepage en de /diensten pagina.",
+      "expected_output": "Een Clarity rapport in private/marketing/microsoft-clarity/ met verkeer, device-verdeling, scroll depth per pagina, gedragsproblemen, smart events, en geprioriteerde aanbevelingen.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Ik heb deze Google Ads data: Campagne 'Brand' - 5000 impressies, 450 clicks, CTR 9%, kosten €180, 12 conversies. Campagne 'Generic' - 15000 impressies, 300 clicks, CTR 2%, kosten €420, 2 conversies. Maak een rapport en koppel het aan de Clarity data als die er is.",
+      "expected_output": "Een Google Ads rapport in private/marketing/google-ads/ met de aangeleverde data, analyse van de campagne-performance, en een cross-channel rapport als er Clarity data beschikbaar is. Moet herkennen dat 'Generic' veel kost met weinig conversies.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Ik wil een volledig marketing rapport. Gebruik alle beschikbare databronnen.",
+      "expected_output": "Setup van private/marketing/ als die niet bestaat. Clarity data ophalen via MCP. Google Ads data ophalen via MCP of vragen aan gebruiker. Cross-channel rapport met funnel overzicht en gecombineerde aanbevelingen. Actiepunten in todo-bestanden.",
+      "files": []
+    }
+  ]
+}
