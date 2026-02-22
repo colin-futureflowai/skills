@@ -9,6 +9,8 @@ skills/
 ├── skills/                  # Individual skill packages
 │   └── <skill-name>/
 │       ├── SKILL.md         # Skill definition (entry point)
+│       ├── evals/           # Test cases and evaluation data
+│       │   └── evals.json
 │       ├── rules/           # Skill rules and configuration
 │       │   └── *.md
 │       └── assets/          # Optional assets (prompts, templates, data)
@@ -40,8 +42,17 @@ cp -r skills/<skill-name> ~/.claude/skills/<skill-name>
 | Skill | Description | Status |
 |-------|-------------|--------|
 | [100m-offers-skill](skills/100m-offers-skill/) | Craft irresistible offers using Alex Hormozi's $100M Offers framework | WIP |
+| [skill-creator](skills/skill-creator/) | Create new skills, improve existing skills, and test skill quality with evals | WIP |
 
 ## Creating a New Skill
+
+The easiest way to create a new skill is to use the **skill-creator** skill:
+
+> "I want to create a new skill for X"
+
+This will walk you through the intent capture, interview, SKILL.md generation, and eval setup.
+
+Alternatively, scaffold manually:
 
 ```bash
 # Use the template to scaffold a new skill
@@ -54,12 +65,15 @@ Then edit the `SKILL.md` and add your rules in the `rules/` directory.
 
 Every skill must have:
 
-- **`SKILL.md`** - The main skill definition. This is what Claude Code loads.
+- **`SKILL.md`** - The main skill definition with YAML frontmatter (`name` and `description`). This is what Claude Code loads.
+- **`evals/`** - Test cases for verifying skill quality.
 - **`rules/`** - Directory containing rule files that define behavior, constraints, and patterns.
 
 Optional:
+- **`agents/`** - Instructions for specialized subagents.
+- **`references/`** - Documentation loaded into context as needed.
+- **`scripts/`** - Executable code for deterministic tasks.
 - **`assets/`** - Prompts, templates, example data, or other supporting files.
-- **`README.md`** - Human-readable documentation for the skill.
 
 ## License
 

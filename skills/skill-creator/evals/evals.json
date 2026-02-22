@@ -1,0 +1,20 @@
+{
+  "skill_name": "skill-creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to create a skill that helps me write better git commit messages. It should follow conventional commits format, analyze the staged diff, and suggest a message. Something like 'fix(auth): resolve token refresh race condition' style.",
+      "expected_output": "Full creation flow — should ask the 4 intent questions, conduct interview about edge cases (merge commits, breaking changes, scope detection), then generate a SKILL.md with YAML frontmatter, kebab-case name, pushy description, and propose 2-3 test cases."
+    },
+    {
+      "id": 2,
+      "prompt": "So I just spent the last hour getting Claude to help me convert PDF invoices into structured JSON. It works great now — can you turn this workflow into a skill so I can reuse it?",
+      "expected_output": "Should extract intent from conversation context — detect the PDF-to-JSON workflow, identify tools used, input/output formats, and edge cases. Should pre-fill answers to the 4 intent questions from context and ask the user to confirm before writing the SKILL.md."
+    },
+    {
+      "id": 3,
+      "prompt": "I have an existing skill for generating API documentation but it keeps producing really verbose output and misses edge cases in the endpoint descriptions. The skill is at skills/api-docs/SKILL.md. Can you help me improve it?",
+      "expected_output": "Should enter the improvement flow — read the existing skill, propose test cases, run evals, identify the verbosity and edge case issues in the instructions, then suggest targeted improvements following the 'explain the why' and 'keep the prompt lean' principles."
+    }
+  ]
+}
